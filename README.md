@@ -58,11 +58,13 @@ A script to update all outdated pip packages.
     sudo pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip3 install -U
 
 ### Remove Empty Subdirectories
+[`remove_empty`](httpsL//github.com/rivermont/snippets/blob/master/remove_empty.sh)
 Recursively deletes all empty directories below current working directory.
 
     find . -type d -empty -delete
 
 ### Move from Subdirectories
+[`move_to_current`](https://github.com/rivermont/snippets/move_to_current.sh)
 Moves all files in subdirectories to current directory.
 
     find . -mindepth 2 -type f -print -exec mv {} . \;
